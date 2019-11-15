@@ -1,0 +1,21 @@
+{
+  "name": "bywatersolutions/silverstripe-jsoneditorfield",
+  "description": "JSON Editor Field for Silverstripe",
+  "homepage": "http://github.com/bywatersolutions/silverstripe-jsoneditorfield",
+  "keywords": ["silverstripe", "json-editor", "json", "jsonschema"],
+  "license": "GPL v2",
+  "authors": [
+    {"name": "Ian Walls","email": "ian@bywatersolutions.com"}
+  ],
+  "support": {
+    "issues": "http://github.com/bywatersolutions/silverstripe-jsoneditorfield/issues"
+  },
+  "require": {
+    "silverstripe/framework": "^4"
+  },
+  "autoload": {
+    "psr-4": {
+        "ByWaterSolutions\\JsonEditorField\\": "src/"
+    }
+  }
+}
