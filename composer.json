@@ -3,7 +3,7 @@
   "description": "JSON Editor Field for Silverstripe",
   "homepage": "http://github.com/bywatersolutions/silverstripe-jsoneditorfield",
   "keywords": ["silverstripe", "json-editor", "json", "jsonschema"],
-  "license": "GPL v2",
+  "license": "GPL-2.0-or-later",
   "authors": [
     {"name": "Ian Walls","email": "ian@bywatersolutions.com"}
   ],
