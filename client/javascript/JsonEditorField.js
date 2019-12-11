@@ -2,7 +2,7 @@ var ss = ss || {};
 
 (function($) {
     $.entwine('ss', function($) {
-        $('input.jsonfield').entwine({
+        $('input.jsoneditorfield').entwine({
             // Constructor: onmatch
             onmatch: function() {
 		initJsonField();
