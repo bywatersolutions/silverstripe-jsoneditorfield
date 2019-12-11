@@ -19,7 +19,7 @@
     }
   },
   "extra": {
-    "installer-name": "silverstripe-jsoneditorfield",
+    "installer-name": "bywatersolutions/silverstripe-jsoneditorfield",
     "expose": [
         "client"
     ]
