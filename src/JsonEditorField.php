@@ -26,10 +26,10 @@ class JsonEditorField extends TextField {
 	$schema = '{}';
     };
     parent::__construct($name, $title, $value, '', $form);
-    Requirements::javascript('app/jsonfield/javascript/JsonEditorField.js');
-    Requirements::javascript('app/jsonfield/javascript/lib/jsoneditor.min.js');
-    Requirements::javascript('app/jsonfield/javascript/silverstripe.js');
-    Requirements::css('app/jsonfield/styles/jsoneditorfield.css');
+    Requirements::javascript('bywatersolutions/silverstripe-jsoneditorfield:client/javascript/JsonEditorField.js');
+    Requirements::javascript('bywatersolutions/silverstripe-jsoneditorfield:client/javascript/lib/jsoneditor.min.js');
+    Requirements::javascript('bywatersolutions/silverstripe-jsoneditorfield:client/javascript/silverstripe.js');
+    Requirements::css('bywatersolutions/silverstripe-jsoneditorfield:client/styles/jsoneditorfield.css');
     $this->addExtraClass('jsoneditorfield');
     $this->setInputType('hidden');
 

@@ -17,5 +17,11 @@
     "psr-4": {
         "ByWaterSolutions\\JsonEditorField\\": "src/"
     }
+  },
+  "extra": {
+    "installer-name": "silverstripe-jsoneditorfield",
+    "expose": [
+        "client"
+    ]
   }
 }
