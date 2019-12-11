@@ -59,16 +59,13 @@ class JsonEditorField extends TextField {
         // Get an array of errors from the validator
         var errors = editor.validate();
         var indicator = document.getElementById('valid_indicator');
-	var save_button = document.getElementById('Form_ItemEditForm_action_save');
-	var save_button2 = document.getElementById('Form_ItemEditForm_action_doSaveAndQuit');
+	var save_button = document.getElementById('Form_ItemEditForm_action_doSave');
         // Not valid
         if(errors.length) {
           indicator.style.color = 'red';
           indicator.textContent = "not valid";
 	  save_button.disabled = true;
-	  save_button2.disabled = true;
           save_button.title = "JSON not valid; see console for details";
-          save_button2.title = "JSON not valid; see console for details";
           console.log(errors);
         }
         // Valid
@@ -76,9 +73,7 @@ class JsonEditorField extends TextField {
           indicator.style.color = 'green';
           indicator.textContent = "valid";
 	  save_button.disabled = false;
-	  save_button2.disabled = false;
           save_button.title = '';
-          save_button2.title = '';
           var input = document.getElementById('Form_ItemEditForm_$name');
           input.value = JSON.stringify(editor.getValue());
         }
