@@ -32,56 +32,8 @@ class JsonEditorField extends TextField {
     Requirements::css('bywatersolutions/silverstripe-jsoneditorfield:client/styles/jsoneditorfield.css');
     $this->addExtraClass('jsoneditorfield');
     $this->setInputType('hidden');
+    $this->setAttribute('data-field-schema', $schema);
 
-    Requirements::customScript(<<<JS
-	function initJsonField() {
-	      var startval = JSON.parse(document.getElementById('Form_ItemEditForm_$name').value);
-
-	      // Initialize the editor
-	      var editor = new JSONEditor(document.getElementById('Form_ItemEditForm_$name' + '_Editor'),{
-	        ajax: true,
-	        schema: $schema,
-		startval: startval,
-		// Disable JSON editing
-		//disable_edit_json: true,
-		disable_collapse: true,
-//                display_required_only: true,
-                required_by_default: true,
-	        no_additional_properties: true,
-	       // Require all properties by default
-	       //required_by_default: true,
-		theme: "silverstripe"
-   	      });
-
-      // Hook up the validation indicator to update its 
-      // status whenever the editor changes
-      editor.on('change',function() {
-        // Get an array of errors from the validator
-        var errors = editor.validate();
-        var indicator = document.getElementById('valid_indicator');
-	var save_button = document.getElementById('Form_ItemEditForm_action_doSave');
-        // Not valid
-        if(errors.length) {
-          indicator.style.color = 'red';
-          indicator.textContent = "not valid";
-	  save_button.disabled = true;
-          save_button.title = "JSON not valid; see console for details";
-          console.log(errors);
-        }
-        // Valid
-        else {
-          indicator.style.color = 'green';
-          indicator.textContent = "valid";
-	  save_button.disabled = false;
-          save_button.title = '';
-          var input = document.getElementById('Form_ItemEditForm_$name');
-          input.value = JSON.stringify(editor.getValue());
-        }
-      });
-	}
-
-JS
-    );
   }
 
 }
