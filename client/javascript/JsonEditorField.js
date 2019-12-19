@@ -17,6 +17,8 @@ var ss = ss || {};
                 startval: JSON.parse(startval),
                 disable_collapse: true,
                 required_by_default: true,
+		disable_properties: true,
+		disable_edit_json: true,
                 no_additional_properties: true,
                 theme: "silverstripe"
               });
